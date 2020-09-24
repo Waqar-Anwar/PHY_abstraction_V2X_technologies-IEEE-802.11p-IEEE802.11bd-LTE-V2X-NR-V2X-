@@ -18,3 +18,12 @@ LTE-V2X: (https://de.mathworks.com/help/lte/examples/release-14-v2x-sidelink-pss
 NR-V2X: (https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html)
 
 Note: AWGN simulated tables are provided for technologies, which are required for PHY abstraction
+
+
+Assumptions:
+Ideal channel estimation, and perfect time and frequency synchronization is available. 
+
+
+Channel Model:
+V2X triger team defined Urbun Crossing NLOS channel model (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) is used, which are also provided in seprate MATLAB file.
+
