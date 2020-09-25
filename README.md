@@ -25,6 +25,5 @@ Ideal channel estimation, and perfect time and frequency synchronization is avai
 
 
 Channel Model:
-V2X triger team defined channel models for V2V senarios (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) based on the measurments. The implementation of these channel models is also uploaded, however for analysis we only used Uban crossing NLOS channel model.
-For simulation, random relization of channel are created by variing the seed. The channel frequency responce is recoreded for used number of subcarriers and OFDM symbols, the channel estimation function provided by above implementations of PHY simulators (without adding any noise) is used for this purpose. These sampled channel relization are also provided for each technology, which are used in various simulations. 
+Channel Model: V2X trigger team defined channel models for V2V scenarios (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) based on the measurements. The implementation of these channel models is also uploaded, however for analysis we only used Uban crossing NLOS channel model. For simulation, the random realizations of the channel are created by varying the seed. The channel frequency response is recorded for the used number of subcarriers and OFDM symbols, the channel estimation function provided by the above implementations of PHY simulators (without adding any noise) is used for this purpose. The sampled channel realizations are also provided for each technology, which are used for various simulations.
 
