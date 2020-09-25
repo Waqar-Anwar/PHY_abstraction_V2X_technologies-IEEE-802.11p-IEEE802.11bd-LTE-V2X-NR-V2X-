@@ -4,7 +4,7 @@ This repository contains the code of PHY abstraction for current V2X technologie
 
 Introduction:
 
-PHY abstraction converts the fading SINR into AWGN equivalent SNR using effective SINR mapping techniques. After the conversion, effective SINR can be treated as AWGN SNR, which means the simulated performance in presence of the AWGN channel can be used to estimate performance under various fading conditions. This reasons for doing so are the following
+PHY abstraction converts the fading SINR into AWGN equivalent SNR using effective SINR mapping techniques. After the conversion, effective SINR can be treated as AWGN SNR, which means the simulated performance in presence of the AWGN channel can be used to estimate performance under various fading conditions. Reasons for doing so are the following
 1) To evaluate the performance of certain technology system-level simulations are used prior to its deployment for suitability analysis
 2) The system-level simulation becomes infeasible if complete PHY is simulated per each node such as coding, constellation mapping, waveform generation, and passing waveform from the channel and reverse processing at the receiver. As these simulation require a huge amount of time and computations
 3) To speed up simulation PHY abstraction is used, which map the received SINR to throughput or PER. 
