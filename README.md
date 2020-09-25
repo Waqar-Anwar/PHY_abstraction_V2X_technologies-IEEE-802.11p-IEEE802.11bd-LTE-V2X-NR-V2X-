@@ -23,7 +23,6 @@ Note: AWGN simulated tables are provided for each technology, which are required
 
 
 Assumptions:
-
 Ideal channel estimation, and perfect time and frequency synchronization is available. 
 
 
