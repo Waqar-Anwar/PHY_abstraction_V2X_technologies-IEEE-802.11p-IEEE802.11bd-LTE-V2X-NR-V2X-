@@ -15,9 +15,9 @@ AWGN tables are generated using technology-specific MATLAB toolbox examples. Lin
 IEEE 802.11p: (https://de.mathworks.com/help/wlan/examples/802-11p-packet-error-rate-simulation-for-a-vehicular-channel.html)
 IEEE 802.11bd: (https://de.mathworks.com/help/wlan/examples/802-11ac-packet-error-rate-simulation-for-8x8-tgac-channel.html)
 LTE-V2X: (https://de.mathworks.com/help/lte/examples/release-14-v2x-sidelink-pssch-throughput.html)
-NR-V2X: (https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html)
+NR-V2X: (https://de.mathworks.com/help/5g/ug/nr-pusch-throughput.html)
 
-Note: AWGN simulated tables are provided for technologies, which are required for PHY abstraction
+Note: AWGN simulated tables are provided for each technology, which are required for PHY abstraction
 
 
 Assumptions:
@@ -25,5 +25,6 @@ Ideal channel estimation, and perfect time and frequency synchronization is avai
 
 
 Channel Model:
-V2X triger team defined Urbun Crossing NLOS channel model (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) is used, which are also provided in seprate MATLAB file.
+V2X triger team defined channel models for V2V senarios (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) based on the measurments. The implementation of these channel models is also uploaded, however for analysis we only used Uban crossing NLOS channel model.
+For simulation, random relization of channel are created by variing the seed. The channel frequency responce is recoreded for used number of subcarriers and OFDM symbols, the channel estimation function provided by above implementations of PHY simulators (without adding any noise) is used for this purpose. These sampled channel relization are also provided for each technology, which are used in various simulations. 
 
