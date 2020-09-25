@@ -18,13 +18,13 @@ IEEE 802.11p: (https://de.mathworks.com/help/wlan/examples/802-11p-packet-error-
 IEEE 802.11bd: (https://de.mathworks.com/help/wlan/examples/802-11ac-packet-error-rate-simulation-for-8x8-tgac-channel.html)
 LTE-V2X: (https://de.mathworks.com/help/lte/examples/release-14-v2x-sidelink-pssch-throughput.html)
 NR-V2X: (https://de.mathworks.com/help/5g/ug/nr-pusch-throughput.html)
-
 Note: AWGN simulated tables are provided for each technology, which are required for PHY abstraction
 
 
-Assumptions:
 
+Assumptions:
 Ideal channel estimation, and perfect time and frequency synchronization is available. 
+
 
 
 Channel Model:
