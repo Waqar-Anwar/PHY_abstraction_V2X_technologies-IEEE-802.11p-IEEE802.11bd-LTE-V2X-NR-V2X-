@@ -18,9 +18,11 @@ IEEE 802.11p: (https://de.mathworks.com/help/wlan/examples/802-11p-packet-error-
 IEEE 802.11bd: (https://de.mathworks.com/help/wlan/examples/802-11ac-packet-error-rate-simulation-for-8x8-tgac-channel.html)
 LTE-V2X: (https://de.mathworks.com/help/lte/examples/release-14-v2x-sidelink-pssch-throughput.html)
 NR-V2X: (https://de.mathworks.com/help/5g/ug/nr-pusch-throughput.html)
+
+
 Note: AWGN simulated tables are provided for each technology, which are required for PHY abstraction
 
-
+Further, implementations of 802.11bd and 802.11p are also available by "Ioannis Sarris from U-box": https://github.com/u-blox/ubx-v2x  
 
 Assumptions:
 Ideal channel estimation, and perfect time and frequency synchronization is available. 
@@ -29,5 +31,7 @@ Ideal channel estimation, and perfect time and frequency synchronization is avai
 
 Channel Model:
 
-V2X trigger team defined channel models for V2V scenarios (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) based on the measurements. The implementation of these channel models is also uploaded, however for analysis we only used Uban crossing NLOS channel model. For simulation, the random realizations of the channel are created by varying the seed. The channel frequency response is recorded for the used number of subcarriers and OFDM symbols, the channel estimation function provided by the above implementations of PHY simulators (without adding any noise) is used for this purpose. The sampled channel realizations are also provided for each technology, which are used for various simulations.
+V2X trigger team defined channel models for V2V scenarios (M. Kahn, “V2V radio channel models” IEEE 802.11-14/0259r0, Feb.2014) based on the measurements. The open source implemention by "Ioannis Sarris from U-box" is available here: https://github.com/u-blox/ubx-v2x 
+
+However for analysis we only used Uban crossing NLOS channel model. For simulation, the random realizations of the channel are created by varying the seed. The channel frequency response is recorded for the used number of subcarriers and OFDM symbols, the channel estimation function provided by the above implementations of PHY simulators (without adding any noise) is used for this purpose. The sampled channel realizations are also provided for each technology, which are used for various simulations.
 
