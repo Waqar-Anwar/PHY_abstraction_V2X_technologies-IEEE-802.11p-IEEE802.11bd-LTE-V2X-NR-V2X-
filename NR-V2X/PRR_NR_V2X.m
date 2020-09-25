@@ -8,7 +8,7 @@
 b = load('Results_nr_awgn.mat'); % AWGN look-up table
 chan = load('channel_data.mat'); % Channel gain recorded for 1000 channel relizations of Uran-crossing NLOS channel [M. Kahn, “V2V radio channel models,” IEEE 802.11-14/0259r0, Feb.2014] using PDSCH MATLAB 5G toolbox example [https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html]
 
-mcs = 21; % used MCS
+mcs = 7; % used MCS
 
 P_tx = 23; % transmitted power
 P_L0 = 47.86; % path loss at reference distance 
@@ -37,7 +37,7 @@ snr_d = P_tx - P_L0 - n_exp*(10*log10(d)) - (-P_n) - NF + G_tx + G_rx;  % SNR at
 
 ICI = 0.000223;           % ICI calculated using eq. 31 of the paper
 
-sigma_sym = abs(sinc(500*(1/15e3)))^2; % received signal power when the sampling is offset by Doppelr
+sigma_sym = abs(sinc(500*(1/60e3)))^2; % received signal power when the sampling is offset by Doppelr
 
 for i=1:length(snr_d)
     
