@@ -2,7 +2,7 @@
 % PHY configration as defined by PSSCH. 
 
 b = load('Results_nr_awgn.mat'); % AWGN look-up table
-chan = load('estimation_mcs7_500.mat'); % Channel gain recorded for 1000 channel relizations of Uran-crossing NLOS channel [M. Kahn, “V2V radio channel models,” IEEE 802.11-14/0259r0, Feb.2014] using PDSCH MATLAB 5G toolbox example [https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html]
+chan = load('channel_data.mat'); % Channel gain recorded for 1000 channel relizations of Uran-crossing NLOS channel [M. Kahn, “V2V radio channel models,” IEEE 802.11-14/0259r0, Feb.2014] using PDSCH MATLAB 5G toolbox example [https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html]
 channel= chan.hest(1:1000,chan.puschIndices); % Indexes on which data is transmitted puschIndices
 
 P_tx = 23; % transmitted power
