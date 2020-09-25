@@ -4,8 +4,8 @@
 % Please Download first Results_nr_awgn.mat from GitHub and channel_data.mat from (https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0)
 
 b = load('Results_nr_awgn.mat'); % AWGN look-up table
-chan = load('channel_data.mat'); % Channel gain recorded for 1000 channel relizations of Uran-crossing NLOS channel [M. Kahn, ìV2V radio channel models,î IEEE 802.11-14/0259r0, Feb.2014] using PDSCH MATLAB 5G toolbox example [https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html]
-channel= chan.hest(1:1000,:,2:13); % Symbols used to transmit data
+chan = load('channel_data.mat'); % Channel gain recorded for 1000 channel relizations of Uran-crossing NLOS channel [M. Kahn, ‚ÄúV2V radio channel models,‚Äù IEEE 802.11-14/0259r0, Feb.2014] using PDSCH MATLAB 5G toolbox example [https://de.mathworks.com/help/5g/ug/nr-pdsch-throughput.html]
+channel= chan.hest(1:1000,:,2:13); % Symbols at which data is transmitted
 
 P_tx = 23; % transmitted power
 P_L0 = 47.86; % path loss at reference distance 
@@ -44,10 +44,6 @@ for i=1:length(snr_d)
     ICI_plus_noise = (ICI + pn)/sigma_sym;
     
     snr_real = (abs(channel).^2) ./ICI_plus_noise;
-    
-% %       estimat = reshape(channel,[length(channel(:,1)),length(channel(1,:))/12,12]); % 1000 channel realizations
-%       sigma_mmse= mean(((abs(channel).^2)./((abs(channel).^2)+ ICI_plus_noise)).^2,2);
-%       snr_real = 1./(1./(sqrt(sigma_mmse))-1);  % SINR per received OFDM symbol
     
     for ind =1:mcs_len
         
