@@ -1,7 +1,7 @@
-In to evalute performance using PHY abstraction, frequency response of Urban crossing LOS channel is provided "channel_data.mat" and can be downloded from: https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0
+In to evaluate performance using PHY abstraction, the frequency response of Urban crossing LOS channel is provided "channel_data.mat" and can be downloaded from: https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0
 
-In additon SINR vs. PER tables are also provided in the folder "Results_nr_awgn.mat"
+In addition, SINR vs. PER tables are also provided in the folder "Results_nr_awgn.mat"
 
-Then to evalute PER, PRR, Data rates or transmission latency relvant script should be simualted.
+Then to evaluate PER, PRR, Data rates, or transmission latency relevant script should be simulated.
 
-The V2V channel models can be downloded from open source implemention by "Ioannis Sarris from U-box": https://github.com/u-blox/ubx-v2x
+The V2V channel models can be downloaded from open-source implementation by "Ioannis Sarris from U-box": https://github.com/u-blox/ubx-v2x
