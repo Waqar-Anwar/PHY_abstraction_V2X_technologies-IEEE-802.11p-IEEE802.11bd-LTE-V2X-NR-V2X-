@@ -1,4 +1,4 @@
-In order to evaluate performance using PHY abstraction, the frequency response of Urban crossing LOS channel is provided for WLAN in "channel_wlan.mat"
+In order to evaluate performance using PHY abstraction, the frequency response of Urban crossing LOS channel is provided for WLAN in "channel_11bd.mat",which can be downloaded here: https://www.dropbox.com/s/3522ashf40qjz1a/channel_11bd.mat?dl=0
 
 In addition, SINR vs. PER tables are also provided in the folder "Results_11bd_awgn.mat"
 
