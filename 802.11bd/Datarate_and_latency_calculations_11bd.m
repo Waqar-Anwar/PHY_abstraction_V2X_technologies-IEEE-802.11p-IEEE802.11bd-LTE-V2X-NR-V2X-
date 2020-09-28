@@ -57,7 +57,7 @@ for i=1:length(snr_d)
         snr_awgn = b.snr_11bd_awgn(ind,:);
         per_awgn = b.per_11bd_awgn(ind,:);
         
-
+%        snr_ieesm=10.*log10((beta(ind)/2).*(lambertw(exp(1).*((sum(exp(-snr_real(:,:,1:n_sym_11bd(ind))'./beta(ind))./sqrt(((2.*snr_real')./beta(ind)) + 1))./52).^(-2))) - 1));
         snr_ieesm=10*log10((beta(ind)/2).*(lambertw(exp(1).*(mean(exp(-snr_real(:,:,1:n_sym_11bd(ind))./beta(ind))./sqrt(((2.*snr_real(:,:,1:n_sym_11bd(ind)))./beta(ind)) + 1),[2 3]).^(-2))) - 1)); %Effective SINR mapping
         snr_ieesm(isinf(snr_ieesm)) = 100;  % in case of positive infinity it will replace the value with 100
         loc_d = knnsearch(snr_awgn',snr_ieesm);
