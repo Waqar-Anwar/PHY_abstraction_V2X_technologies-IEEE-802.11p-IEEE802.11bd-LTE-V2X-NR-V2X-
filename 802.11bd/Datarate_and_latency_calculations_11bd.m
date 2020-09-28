@@ -1,3 +1,10 @@
+% This script could be used to simulate Data rate and transmission latency for 802.11bd
+
+% Please Download first Results_11bd_awgn.mat from GitHub and channel_11bd.mat from (which can be downloaded here: https://www.dropbox.com/s/3522ashf40qjz1a/channel_11bd.mat?dl=0)
+
+
+
+
 b = load('Results_11bd_awgn.mat');  % AWGN reference of 11bd cueves for first 10 MCS (0-9)
 chan = load('channel_11bd.mat'); % fading channel
 channel = chan.hest(1:1000,:,:); % first 1000 channel relaizations
@@ -29,8 +36,6 @@ t_tx_11bd = (t_pre_11bd + t_AIFS + t_sym.*n_sym_11bd + t_sym.*n_ma)*1e3; % trans
 Gamma_11bd = (Pb*8 ./t_tx_11bd)/1e3; % Data rates of each MCS in Mbps
 
 beta = [1 2 2 10 10 42 42 42 170 170]; % beta values depending on the modulation order 1 for BPSK, 2 for QPSK, 10 for 16 QAM, 42 for 64 QAM, 170 for 256 QAM
-% data_rate_mcs = [2.31 4.17 5.77 6.98 9.09 11.11 11.54 12.00 13.64 13.64];
-% latency = [1.040 0.576 0.416 0.344 0.264 0.216 0.208 0.200 0.176 0.176];
 mcs_len = 10; % number of MCSs
 
 
@@ -57,7 +62,6 @@ for i=1:length(snr_d)
         snr_awgn = b.snr_11bd_awgn(ind,:);
         per_awgn = b.per_11bd_awgn(ind,:);
         
-%        snr_ieesm=10.*log10((beta(ind)/2).*(lambertw(exp(1).*((sum(exp(-snr_real(:,:,1:n_sym_11bd(ind))'./beta(ind))./sqrt(((2.*snr_real')./beta(ind)) + 1))./52).^(-2))) - 1));
         snr_ieesm=10*log10((beta(ind)/2).*(lambertw(exp(1).*(mean(exp(-snr_real(:,:,1:n_sym_11bd(ind))./beta(ind))./sqrt(((2.*snr_real(:,:,1:n_sym_11bd(ind)))./beta(ind)) + 1),[2 3]).^(-2))) - 1)); %Effective SINR mapping
         snr_ieesm(isinf(snr_ieesm)) = 100;  % in case of positive infinity it will replace the value with 100
         loc_d = knnsearch(snr_awgn',snr_ieesm);
