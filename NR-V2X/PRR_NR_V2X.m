@@ -25,7 +25,7 @@ n_bpm =[0.2344 0.3066 0.3770 0.4902 0.6016 0.7402 0.8770 1.0273 1.1758 1.3262 1.
 
 beta = [2 2 2 2 2 2 2 2 2 2 10 10 10 10 10 10 10 42 42 42 42 42 42 42 42 42 42 42 42]; % Depending on the modulation 1 for BPSK, 2 for QPSK, 10 for 16-QAM, 42 for 64-QAM, 170 for 256-QAM obtained from SER (symbol error rate) experssions 
 
-ind =mcs+1;
+ind = mcs+1;
 n_RB_NR = ceil((Pb*8)./(n_RE_NR.*n_bpm(ind)));
 channel= chan.hest(1:1000,1:12*n_RB_NR,2:13); % Extract the channel for used number of resources and symbols
 
