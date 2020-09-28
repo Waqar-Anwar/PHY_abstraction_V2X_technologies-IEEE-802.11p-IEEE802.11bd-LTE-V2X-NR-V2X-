@@ -1,3 +1,6 @@
+% This script can be used to obtain Data rate and transmission latency of
+% LTE-V2X
+
 % Please first Download "Results_lte_awgn.mat" from GitHub and channel_data.mat from (https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0)
 
 b = load('Results_lte_awgn.mat'); % AWGN look-up table
@@ -24,7 +27,7 @@ Gamma_lte = ((Pb*8*n_RB_fr_lte)./(n_RB_lte.*t_fr))./1e6; % Mbps
 t_tx_lte = ceil(n_RB_lte./(n_RB_fr_lte/10)).*(t_sub_fr*1e3); % transmission latency in ms
 
 beta = [2 2 2 2 2 2 2 2 2 2 2 10 10 10 10 10 10 10 10 42 42 42 42 42 42 42 42 42 42]; % Depending on the modulation 1 for BPSK, 2 for QPSK, 10 for 16-QAM, 42 for 64-QAM obtained from SER (symbol error rate) experssions 
-mcs_len = 10; % number of MCSs
+mcs_len = 21; % number of MCSs
 
 
 
