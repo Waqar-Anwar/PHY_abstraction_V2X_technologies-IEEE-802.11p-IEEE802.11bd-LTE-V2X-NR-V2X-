@@ -53,9 +53,9 @@ clear data_rate latency_temp
 for i=1:length(snr_d)
     
     pn = 10^(-snr_d(i)/10);
-    noise = (ICI + pn)/sigma_sym;
+    ICI_plus_noise = (ICI + pn)/sigma_sym;
     
-    snr_real = 1./((1./((abs(channel).^2)./((abs(channel).^2)+ noise)))-1); % received SINR per each data symbols and sub-carrier
+    snr_real = (abs(channel).^2) ./ICI_plus_noise;  % received SINR per sub-carrier of each OFDM symbol
     
     for ind =1:mcs_len
         
