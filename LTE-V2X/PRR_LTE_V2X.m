@@ -1,8 +1,6 @@
 % This script could be used to simulate the PRR (Packet Reception Ratio) of
 % LTE-V2X
 
-% Please first Download Results_nr_awgn.mat from GitHub and channel_data.mat from (https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0)
-
 % Please first Download "Results_lte_awgn.mat" from GitHub and channel_data.mat from (https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0)
 
 b = load('Results_lte_awgn.mat'); % AWGN look-up table
