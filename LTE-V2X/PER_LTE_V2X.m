@@ -1,7 +1,4 @@
-% Currently these results are based on the PUSCH performmance with OFDM which uses almost simialr 
-% PHY configration as defined by PSSCH. 
-
-% This script is used to simulate the PER (Packet Error Ratio)
+% This script is used to simulate the PER (Packet Error Ratio) of LTE-V2X
 
 % Please Download first "Results_nr_awgn.mat" from GitHub and "channel_data.mat" from (https://www.dropbox.com/s/tx975gatia41mq1/channel_data.mat?dl=0)
 
